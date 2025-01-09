@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blumark</title>
+  
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet"></link>
+
+    <!-- Swiper.js -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+</head>
+<body>
+  <header class="head" id="home">
+      <div class="fixed-men">
+        <div class="menu">
+          <div class="rt">
+          <button class="toggle-menu" onclick="toggleMenu()">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
+          </div>
+          <div class="user-icon">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="#"><i class="fa-regular fa-user"></i></a>
+          <div>
+            <span>0</span>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+          <ul class="menu-1">
+              <li><a href="#home" >
+                الصفحة الرئيسية
+
+              </a></li>
+              <li><a href="#about">
+                من نحن
+
+              </a></li>
+              <li><a href="#services">خدماتنا</a></li>
+              <li><a href="#">منتجاتنا</a></li>
+          </ul>
+          
+            <img class="LOgo" src="image/logo.png" alt="Logo">
+      </div>
+      <nav class="side-menu">
+        <div class="header-sidemenu">
+          <button class="close-menu" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="menu-1">
+          <li><a href="#home">الصفحة الرئيسية</a></li>
+          <li><a href="#about">من نحن</a></li>
+          <li class="dropdown">
+            <a href="#" onclick="toggleDropdown(event)">خدماتنا</a>
+            <ul class="dropdown-menu">
+              <li><a href="product1.html">خدمات التسويق الرقمي</a></li>
+              <li><a href="product2.html">إدارة التواصل الاجتماعي</a></li>
+              <li><a href="product3.html">برمجيات وإنشاء المواقع</a></li>
+              <li><a href="product4.html">خدمات Power BI وريادة الأعمال</a></li>
+            </ul>
+          </li>
+          
+          <li><a href="#contact">تواصل معنا</a></li>
+          <li><a href="#">تخفيضات وعروض خاصة</a></li>
+          <li><a href="#">كيف ابدأ مشروعي</a></li>
+          <li><a href="#">احصل علي استشارتك الأولي مجانا</a></li>
+        </ul>
+        
+      </nav>      
+    </div>
+    <div class="title-panner">
+      <h4 id="animated-welcome">مرحبًا بك في <br>
+        <span>Blumark</span></h4>
+      <h1 id="animated-title">رحلتك تبدأ من هنا</h1>
+    </div>
+</header>
+
+<button id="scrollToTop" class="scroll-button"><i class="fa-solid fa-angles-up"></i></button>
+<a class="get-pro" href="#">اتصل بنا</a>
+
+<section class="about-section" id="about">
+  <div class="container">
+      <!-- Right Side: Content -->
+      <div class="content-section">
+          <h3></h3>
+          <h1>من نحن</h1>
+          <p>
+           في بلو مارك ملتزمون بمساعدة الأعمال في المملكة العربية السعودية على تحقيق أهدافها وتسريع التحول الرقمي.
+بصفتنا شركة ذات نظرة مستقبلية، نحن نتماشى مع رؤية المملكة 2030 التي تهدف إلى التنويع الاقتصادي، الابتكار، والاستدامة.
+<br>
+ماذا نقدم؟ 
+<br>
+يعمل فريقنا المكون من المسوقين، المصممين، والمطورين ذوي الخبرة جنباً إلى جنب لإنشاء حلول مبتكرة وفعالة تدعم عملاءنا في:
+<br>
+الوصول إلى جمهورهم المستهدف.
+<br>
+تحقيق أهداف أعمالهم بنجاح.
+<br>
+رؤيتنا وأسلوبنا:
+<br>
+نؤمن بقوة الاستراتيجيات المستندة إلى البيانات.
+<br>
+نركز على التفكير الإبداعي والتطوير المستمر.
+<br>
+نهدف إلى تحقيق نتائج استثنائية تلبي تطلعات عملائنا.
+
+          </p>
+          <a href="#" class="cta-button">قراءة المزيد →</a>
+      </div>
+      <!-- Left Side: Image -->
+      <div class="image-section">
+          <img src="image/about.png" alt="Engineer working">
+      </div>
+  </div>
+</section>
+
+
+<div class="latest-products" id="services" >
+  <h1 class="title">خدماتنا</h1>
+  <span class="sp"></span>
+  <div class="header-container">
+    <p></p>
+    <div class="arrows">
+      <button class="view-all">عرض الكل</button>
+      <span class="arrow left" id="left-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+      <span class="arrow right" id="right-arrow"><i class="fa-solid fa-chevron-left"></i></span>
+    </div>    
+</div>
+  <div class="container-op">
+
+    <a href="product1.html" class="op-card-link" id="digital">
+      <div class="op-card">
+        <div class="op-header">
+            <img src="image/ser3.jpg" alt="صورة الهاتف">
+        </div>
+        <div class="op-footer">
+            <h4>
+              خدمات التسويق الرقمي (Digital Marketing)
+
+            </h4>
+            <p>نوفر لك الأدوات والحلول لتصميم وإدارة متاجر إلكترونية بطريقة سهلة وفعّالة، مع تحسين تجربة العملاء وزيادة الانتشار الرقمي لنشاطك التجاري.
+            </p>
+        </div>
+        <div class="choose-to-cart">
+          <button>
+            <span class="logo-add"><i class="fa-solid fa-bag-shopping"></i></span>
+            <span class="text-choose">اختر باقتك الآن</span>
+          </button>
+        </div>
+      </div>
+    </a>
+
+    <a href="product2.html" class="op-card-link" id="social">
+      <div class="op-card">
+        <div class="op-header">
+            <img src="image/ser4.jpg" alt="صورة الهاتف">
+        </div>
+        <div class="op-footer">
+            <h4>
+              خدمات ادارة التواصل الاجتماعي
+            </h4>
+            <p>نساعدك في تحسين وجودك الرقمي عبر تصميم محتوى جذاب، جدولة المنشورات، التفاعل مع الجمهور، وتحليل الأداء على مختلف المنصات. هدفنا هو بناء علاقات قوية مع عملائك وزيادة الوعي بعلامتك التجارية.
+            </p>
+        </div>
+        <div class="choose-to-cart">
+          <button>
+            <span class="logo-add"><i class="fa-solid fa-bag-shopping"></i></span>
+            <span class="text-choose">اختر باقتك الآن</span>
+          </button>
+        </div>
+      </div>
+    </a>
+
+    <a href="product.html" class="op-card-link" id="power-pi" >
+      <div class="op-card">
+        <div class="op-header">
+            <img src="image/ser3.jpg" alt="صورة الهاتف">
+        </div>
+        <div class="op-footer">
+            <h4>
+              خدمة العملاء CRM
+            </h4>
+            <p>نوفر لك الأدوات والحلول لإدارة علاقات العملاء (CRM) بسهولة وفعالية، مما يساعدك على تنظيم بيانات العملاء، تحسين تواصلهم مع نشاطك التجاري، وزيادة ولائهم لخدماتك. </p>
+        </div>
+        <div class="choose-to-cart">
+          <button>
+            <span class="logo-add"><i class="fa-solid fa-bag-shopping"></i></span>
+            <span class="text-choose">اختر باقتك الآن</span>
+          </button>
+        </div>
+      </div>
+    </a>
+    <a href="product4.html" class="op-card-link" id="power-pi">
+      <div class="op-card">
+        <div class="op-header">
+            <img src="image/ser2.jpg" alt="صورة الهاتف">
+        </div>
+        <div class="op-footer">
+            <h4>
+              خدمات (Power PI) وريادة الأعمال
+            </h4>
+            <p>نقدم خدمات متخصصة باستخدام (Power BI) لتحليل البيانات وعرضها بشكل احترافي لدعم قراراتك، بالإضافة إلى خدمات ريادة الأعمال لتطوير أفكارك وتحويلها إلى مشاريع ناجحة.
+            </p>
+        </div>
+        <div class="choose-to-cart">
+          <button>
+            <span class="logo-add"><i class="fa-solid fa-bag-shopping"></i></span>
+            <span class="text-choose">اختر باقتك الآن</span>
+          </button>
+        </div>
+      </div>
+    </a>
+
+
+    <a href="product3.html" class="op-card-link" id="programming">
+      <div class="op-card">
+        <div class="op-header">
+            <img src="image/ser1.jpg" alt="صورة الهاتف">
+        </div>
+        <div class="op-footer">
+            <h4>
+              خدمات البرمجيات وانشاء المواقع
+
+            </h4>
+            <p>نوفر خدمات برمجية وحلول متكاملة لإنشاء مواقع إلكترونية مبتكرة، تتسم بالجودة وسهولة الاستخدام لتلبية احتياجات عملك وتعزيز حضوره الرقمي.
+            </p>
+        </div>
+        <div class="choose-to-cart">
+          <button>
+            <span class="logo-add"><i class="fa-solid fa-bag-shopping"></i></span>
+            <span class="text-choose">اختر باقتك الآن</span>
+          </button>
+        </div>
+      </div>
+    </a>
+    
+
+  </div>
+</div>
+
+<section class="marketing-services" id="marketing-services">
+  <div class="header-container">
+    <h2 class="section-title">المنتجات الأكثر طلبا</h2>
+    <div class="arrows" id="marketing-arrows">
+      <button class="view-all">عرض الكل</button>
+      <span class="arrow left" id="marketing-left"><i class="fa-solid fa-chevron-right"></i></span>
+      <span class="arrow right" id="marketing-right"><i class="fa-solid fa-chevron-left"></i></span>
+  </div>
+</div>
+
+
+  <div class="services-container" id="marketing-container">
+      <div class="op-card">
+        <div class="op-header">
+            <img src="image/ser3.jpg" alt="صورة الهاتف">
+        </div>
+        <div class="op-footer">
+            <h4>باقة المروة للتسويق الرقمي الشامل</h4>
+            <p>إدارة احترافية لحساباتك على Instagram، TikTok، Snapchat، Google My Business</p>
+            <div class="old-price">SAR 3,500</div>
+            <div class="new-price">SAR 1,999</div>
+            <div class="discount">خصم %77</div>
+        </div>
+        <div class="op-icons">
+          <i class="fa-regular fa-eye"></i> 
+          <i class="fa-regular fa-heart"></i> 
+        </div>
+        <div class="add-to-cart">
+          <button>
+            <span class="logo-add"><i class="fa-solid fa-bag-shopping"></i></span>
+            <span class="text-add">إضافة للسلة</span>
+          </button>
+        </div>
+    </div>
+    <div class="op-card">
+      <div class="op-header">
+          <img src="image/ser4.jpg" alt="صورة الهاتف">
+      </div>
+      <div class="op-footer">
+          <h4>الباقة الذهبية للتسويق الرقمي ✨</h4>
+          <p>إدارة متكاملة للتواصل مع العملاء عبر WhatsApp مع حلول مبتكرة لتعزيز التفاعل وتحقيق رضا العملاء.</p>
+          <div class="old-price">SAR 1,999</div>
+          <div class="new-price">SAR 999</div>
+          <div class="discount">خصم %77</div>
+      </div>
+      <div class="op-icons">
+        <i class="fa-regular fa-eye"></i> 
+        <i class="fa-regular fa-heart"></i> 
+      </div>
+      <div class="add-to-cart">
+        <button>
+          <span class="logo-add"><i class="fa-solid fa-bag-shopping"></i></span>
+          <span class="text-add">إضافة للسلة</span>
+        </button>
+      </div>
+  </div>
+  <div class="op-card">
+    <div class="op-header">
+        <img src="image/ser1.jpg" alt="صورة الهاتف">
+    </div>
+    <div class="op-footer">
+        <h4>الباقة الذهبية لتصميم موقع ويب احترافي 🌐✨</h4>
+        <p>نصمم لك موقع ويب تفاعلي يعكس هوية شركتك باحترافية مع تجربة مستخدم مميزة</p>
+        <div class="old-price">SAR 8,740</div>
+        <div class="new-price">SAR 2,200</div>
+        <div class="discount">خصم %77</div>
+    </div>
+    <div class="op-icons">
+      <i class="fa-regular fa-eye"></i> 
+      <i class="fa-regular fa-heart"></i> 
+    </div>
+    <div class="add-to-cart">
+      <button>
+        <span class="logo-add"><i class="fa-solid fa-bag-shopping"></i></span>
+        <span class="text-add">إضافة للسلة</span>
+      </button>
+    </div>
+</div>
+<div class="op-card">
+  <div class="op-header">
+      <img src="image/ser2.jpg" alt="صورة الهاتف">
+  </div>
+  <div class="op-footer">
+      <h4> الباقة الذهبية للتحليلات ولوحات التحكم 📊✨</h4>
+      <p>نقدم لك 5 لوحات تحكم مخصصة بالكامل لتحليل أعمالك بدقة وتحقيق أهدافك بوضوح.</p>
+      <div class="old-price">SAR 8,740</div>
+      <div class="new-price">SAR 999</div>
+      <div class="discount">خصم %77</div>
+  </div>
+  <div class="op-icons">
+    <i class="fa-regular fa-eye"></i> 
+    <i class="fa-regular fa-heart"></i> 
+  </div>
+  <div class="add-to-cart">
+    <button>
+      <span class="logo-add"><i class="fa-solid fa-bag-shopping"></i></span>
+      <span class="text-add">إضافة للسلة</span>
+    </button>
+  </div>
+</div>
+<div class="op-card">
+<div class="op-header">
+    <img src="image/ser1.jpg" alt="صورة الهاتف">
+</div>
+<div class="op-footer">
+    <h4>انشاء متجر + منتجات علينا</h4>
+    <p>استخدم كود (q) بخصم لك 600 ريال</p>
+    <div class="old-price">SAR 8,740</div>
+    <div class="new-price">SAR 1,999</div>
+    <div class="discount">خصم %77</div>
+</div>
+<div class="op-icons">
+  <i class="fa-regular fa-eye"></i> 
+  <i class="fa-regular fa-heart"></i> 
+</div>
+<div class="add-to-cart">
+  <button>
+    <span class="logo-add"><i class="fa-solid fa-bag-shopping"></i></span>
+    <span class="text-add">إضافة للسلة</span>
+  </button>
+</div>
+</div>
+  </div>
+  
+</section>
+
+<div class="projects">
+  <h2 class="title">المتاجر التي تم إنشاؤها من بلو مارك</h2>
+  <span class="sp"></span>
+  <div class="img-container">
+    <div class="img-box">
+      <!-- صور الصف الأول -->
+      <div class="project"><img src="image/1.webp" alt="متجر 1"></div>
+      <div class="project"><img src="image/2.webp" alt="متجر 2"></div>
+      <div class="project"><img src="image/3.webp" alt="متجر 3"></div>
+      <div class="project"><img src="image/4.webp" alt="متجر 4"></div>
+      <div class="project"><img src="image/5.webp" alt="متجر 5"></div>
+      <div class="project"><img src="image/6.webp" alt="متجر 6"></div>
+      <div class="project"><img src="image/7.webp" alt="متجر 7"></div>
+      <div class="project"><img src="image/8.webp" alt="متجر 8"></div>
+      <div class="project"><img src="image/9.webp" alt="متجر 9"></div>
+      <div class="project"><img src="image/10.webp" alt="متجر 10"></div>
+      <div class="project"><img src="image/11.webp" alt="متجر 11"></div>
+      <div class="project"><img src="image/12.webp" alt="متجر 12"></div>
+      <div class="project"><img src="image/13.webp" alt="متجر 13"></div>
+      <div class="project"><img src="image/14.webp" alt="متجر 14"></div>
+      <div class="project"><img src="image/15.webp" alt="متجر 15"></div>
+      <div class="project"><img src="image/16.webp" alt="متجر 16"></div>
+      <div class="project"><img src="image/17.webp" alt="متجر 17"></div>
+      <div class="project"><img src="image/18.webp" alt="متجر 18"></div>
+      <div class="project"><img src="image/19.webp" alt="متجر 19"></div>
+      <div class="project"><img src="image/20.webp" alt="متجر 20"></div>
+      <div class="project"><img src="image/21.webp" alt="متجر 21"></div>
+      <div class="project"><img src="image/22.webp" alt="متجر 22"></div>
+      <div class="project"><img src="image/23.webp" alt="متجر 23"></div>
+      <div class="project"><img src="image/24.webp" alt="متجر 24"></div>
+      <div class="project"><img src="image/25.webp" alt="متجر 25"></div>
+      <div class="project"><img src="image/26.webp" alt="متجر 26"></div>
+      <div class="project"><img src="image/27.webp" alt="متجر 27"></div>
+      <div class="project"><img src="image/28.webp" alt="متجر 28"></div>
+      <div class="project"><img src="image/29.webp" alt="متجر 29"></div>
+      <div class="project"><img src="image/30.webp" alt="متجر 30"></div>
+      <div class="project"><img src="image/31.webp" alt="متجر 31"></div>
+      <div class="project"><img src="image/32.webp" alt="متجر 32"></div>
+      <div class="project"><img src="image/33.webp" alt="متجر 33"></div>
+      <div class="project"><img src="image/34.webp" alt="متجر 34"></div>
+      <div class="project"><img src="image/35.webp" alt="متجر 35"></div>
+      <div class="project"><img src="image/1.webp" alt="متجر 1"></div>
+      <div class="project"><img src="image/2.webp" alt="متجر 2"></div>
+      <div class="project"><img src="image/3.webp" alt="متجر 3"></div>
+      <div class="project"><img src="image/4.webp" alt="متجر 4"></div>
+      <div class="project"><img src="image/5.webp" alt="متجر 5"></div>
+      <div class="project"><img src="image/6.webp" alt="متجر 6"></div>
+      <div class="project"><img src="image/7.webp" alt="متجر 7"></div>
+      <div class="project"><img src="image/8.webp" alt="متجر 8"></div>
+      <div class="project"><img src="image/9.webp" alt="متجر 9"></div>
+      <div class="project"><img src="image/10.webp" alt="متجر 10"></div>
+      <div class="project"><img src="image/11.webp" alt="متجر 11"></div>
+      <div class="project"><img src="image/12.webp" alt="متجر 12"></div>
+      <div class="project"><img src="image/13.webp" alt="متجر 13"></div>
+      <div class="project"><img src="image/14.webp" alt="متجر 14"></div>
+      <div class="project"><img src="image/15.webp" alt="متجر 15"></div>
+      <div class="project"><img src="image/16.webp" alt="متجر 16"></div>
+      <div class="project"><img src="image/17.webp" alt="متجر 17"></div>
+      <div class="project"><img src="image/18.webp" alt="متجر 18"></div>
+      <div class="project"><img src="image/19.webp" alt="متجر 19"></div>
+      <div class="project"><img src="image/20.webp" alt="متجر 20"></div>
+      <div class="project"><img src="image/21.webp" alt="متجر 21"></div>
+      <div class="project"><img src="image/22.webp" alt="متجر 22"></div>
+      <div class="project"><img src="image/23.webp" alt="متجر 23"></div>
+      <div class="project"><img src="image/24.webp" alt="متجر 24"></div>
+      <div class="project"><img src="image/25.webp" alt="متجر 25"></div>
+      <div class="project"><img src="image/26.webp" alt="متجر 26"></div>
+      <div class="project"><img src="image/27.webp" alt="متجر 27"></div>
+      <div class="project"><img src="image/28.webp" alt="متجر 28"></div>
+      <div class="project"><img src="image/29.webp" alt="متجر 29"></div>
+      <div class="project"><img src="image/30.webp" alt="متجر 30"></div>
+      <div class="project"><img src="image/31.webp" alt="متجر 31"></div>
+      <div class="project"><img src="image/32.webp" alt="متجر 32"></div>
+      <div class="project"><img src="image/33.webp" alt="متجر 33"></div>
+      <div class="project"><img src="image/34.webp" alt="متجر 34"></div>
+      <div class="project"><img src="image/35.webp" alt="متجر 35"></div>
+    </div>
+  </div>
+</div>
+
+<div class="projects">
+<div class="img-container">
+  <div class="img-box rev">
+    <!-- صور الصف الأول -->
+    <div class="project"><img src="image/35.webp" alt="متجر 35"></div>
+      <div class="project"><img src="image/34.webp" alt="متجر 34"></div>
+      <div class="project"><img src="image/33.webp" alt="متجر 33"></div>
+      <div class="project"><img src="image/32.webp" alt="متجر 32"></div>
+      <div class="project"><img src="image/31.webp" alt="متجر 31"></div>
+      <div class="project"><img src="image/30.webp" alt="متجر 30"></div>
+      <div class="project"><img src="image/29.webp" alt="متجر 29"></div>
+      <div class="project"><img src="image/28.webp" alt="متجر 28"></div>
+      <div class="project"><img src="image/27.webp" alt="متجر 27"></div>
+      <div class="project"><img src="image/26.webp" alt="متجر 26"></div>
+      <div class="project"><img src="image/25.webp" alt="متجر 25"></div>
+      <div class="project"><img src="image/24.webp" alt="متجر 24"></div>
+      <div class="project"><img src="image/23.webp" alt="متجر 23"></div>
+      <div class="project"><img src="image/22.webp" alt="متجر 22"></div>
+      <div class="project"><img src="image/21.webp" alt="متجر 21"></div>
+      <div class="project"><img src="image/20.webp" alt="متجر 20"></div>
+      <div class="project"><img src="image/19.webp" alt="متجر 19"></div>
+      <div class="project"><img src="image/18.webp" alt="متجر 18"></div>
+      <div class="project"><img src="image/17.webp" alt="متجر 17"></div>
+      <div class="project"><img src="image/16.webp" alt="متجر 16"></div>
+      <div class="project"><img src="image/15.webp" alt="متجر 15"></div>
+      <div class="project"><img src="image/14.webp" alt="متجر 14"></div>
+      <div class="project"><img src="image/13.webp" alt="متجر 13"></div>
+      <div class="project"><img src="image/12.webp" alt="متجر 12"></div>
+      <div class="project"><img src="image/11.webp" alt="متجر 11"></div>
+      <div class="project"><img src="image/10.webp" alt="متجر 10"></div>
+      <div class="project"><img src="image/9.webp" alt="متجر 9"></div>
+      <div class="project"><img src="image/8.webp" alt="متجر 8"></div>
+      <div class="project"><img src="image/7.webp" alt="متجر 7"></div>
+      <div class="project"><img src="image/6.webp" alt="متجر 6"></div>
+      <div class="project"><img src="image/5.webp" alt="متجر 5"></div>
+      <div class="project"><img src="image/4.webp" alt="متجر 4"></div>
+      <div class="project"><img src="image/3.webp" alt="متجر 3"></div>
+      <div class="project"><img src="image/2.webp" alt="متجر 2"></div>
+      <div class="project"><img src="image/1.webp" alt="متجر 1"></div>
+      <div class="project"><img src="image/35.webp" alt="متجر 35"></div>
+      <div class="project"><img src="image/34.webp" alt="متجر 34"></div>
+      <div class="project"><img src="image/33.webp" alt="متجر 33"></div>
+      <div class="project"><img src="image/32.webp" alt="متجر 32"></div>
+      <div class="project"><img src="image/31.webp" alt="متجر 31"></div>
+      <div class="project"><img src="image/30.webp" alt="متجر 30"></div>
+      <div class="project"><img src="image/29.webp" alt="متجر 29"></div>
+      <div class="project"><img src="image/28.webp" alt="متجر 28"></div>
+      <div class="project"><img src="image/27.webp" alt="متجر 27"></div>
+      <div class="project"><img src="image/26.webp" alt="متجر 26"></div>
+      <div class="project"><img src="image/25.webp" alt="متجر 25"></div>
+      <div class="project"><img src="image/24.webp" alt="متجر 24"></div>
+      <div class="project"><img src="image/23.webp" alt="متجر 23"></div>
+      <div class="project"><img src="image/22.webp" alt="متجر 22"></div>
+      <div class="project"><img src="image/21.webp" alt="متجر 21"></div>
+      <div class="project"><img src="image/20.webp" alt="متجر 20"></div>
+      <div class="project"><img src="image/19.webp" alt="متجر 19"></div>
+      <div class="project"><img src="image/18.webp" alt="متجر 18"></div>
+      <div class="project"><img src="image/17.webp" alt="متجر 17"></div>
+      <div class="project"><img src="image/16.webp" alt="متجر 16"></div>
+      <div class="project"><img src="image/15.webp" alt="متجر 15"></div>
+      <div class="project"><img src="image/14.webp" alt="متجر 14"></div>
+      <div class="project"><img src="image/13.webp" alt="متجر 13"></div>
+      <div class="project"><img src="image/12.webp" alt="متجر 12"></div>
+      <div class="project"><img src="image/11.webp" alt="متجر 11"></div>
+      <div class="project"><img src="image/10.webp" alt="متجر 10"></div>
+      <div class="project"><img src="image/9.webp" alt="متجر 9"></div>
+      <div class="project"><img src="image/8.webp" alt="متجر 8"></div>
+      <div class="project"><img src="image/7.webp" alt="متجر 7"></div>
+      <div class="project"><img src="image/6.webp" alt="متجر 6"></div>
+      <div class="project"><img src="image/5.webp" alt="متجر 5"></div>
+      <div class="project"><img src="image/4.webp" alt="متجر 4"></div>
+      <div class="project"><img src="image/3.webp" alt="متجر 3"></div>
+      <div class="project"><img src="image/2.webp" alt="متجر 2"></div>
+      <div class="project"><img src="image/1.webp" alt="متجر 1"></div>
+  </div>
+</div>
+</div>
+
+
+
+
+<section class="reviews-section">
+  <h2 class="title">آراء العملاء</h2>
+  <span class="sp"></span>
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide review-card">
+        <div class="comment">خدمة ممتازة وسريعة، أنصح بها بشدة!</div>
+        <div class="client-info">
+          <div class="avatar"><img src="image/avatar_male.webp" alt="Avatar"></div>
+          <div>
+            <div class="client-name">عمر الزهراني</div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide review-card">
+        <div class="comment">تعامل احترافي وسهل، بارك الله فيكم!</div>
+        <div class="client-info">
+          <div class="avatar"><img src="image/avatar_female.webp" alt="Avatar"></div>
+          <div>
+            <div class="client-name">رنا الحارثي</div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide review-card">
+        <div class="comment">تجربة مميزة وخدمة رائعة، شكرًا لكم.</div>
+        <div class="client-info">
+          <div class="avatar"><img src="image/avatar_male.webp" alt="Avatar"></div>
+          <div>
+            <div class="client-name">محمد السعيد</div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide review-card">
+        <div class="comment">دقة وسرعة في التنفيذ، سأكرر التجربة!</div>
+        <div class="client-info">
+          <div class="avatar"><img src="image/avatar_male.webp" alt="Avatar"></div>
+          <div>
+            <div class="client-name">ياسر الجابري</div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide review-card">
+        <div class="comment">أفضل خدمة حصلت عليها، شكرًا جزيلًا!</div>
+        <div class="client-info">
+          <div class="avatar"><img src="image/avatar_female.webp" alt="Avatar"></div>
+          <div>
+            <div class="client-name">سارة النعيمي</div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide review-card">
+        <div class="comment">سعدت بالتعامل معكم، خدماتكم رائعة.</div>
+        <div class="client-info">
+          <div class="avatar"><img src="image/avatar_male.webp" alt="Avatar"></div>
+          <div>
+            <div class="client-name">أحمد الراشد</div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide review-card">
+        <div class="comment">من أفضل التجارب التي قمت بها على الإطلاق!</div>
+        <div class="client-info">
+          <div class="avatar"><img src="image/avatar_female.webp" alt="Avatar"></div>
+          <div>
+            <div class="client-name">مها الدوسري</div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide review-card">
+        <div class="comment">خدمة رائعة جدًا وسهلة الاستخدام.</div>
+        <div class="client-info">
+          <div class="avatar"><img src="image/avatar_male.webp" alt="Avatar"></div>
+          <div>
+            <div class="client-name">فهد العتيبي</div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide review-card">
+        <div class="comment">التطبيق مفيد جدًا ويوفر الوقت والجهد.</div>
+        <div class="client-info">
+          <div class="avatar"><img src="image/avatar_female.webp" alt="Avatar"></div>
+          <div>
+            <div class="client-name">نور الشمري</div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide review-card">
+        <div class="comment">جودة الخدمة ممتازة والأسعار مناسبة.</div>
+        <div class="client-info">
+          <div class="avatar"><img src="image/avatar_male.webp" alt="Avatar"></div>
+          <div>
+            <div class="client-name">سلطان الغامدي</div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- <section class="marketing-services">
+  <div class="header-container">
+    <h2 class="section-title">متاجر بلو مارك</h2>
+</div>
+
+  <div class="services-container">
+
+<div class="op-card">
+<div class="op-header">
+    <img src="image/Nano-1.jpg" alt="صورة الهاتف">
+</div>
+<div class="op-footer">
+    <h4 style="font-size: 24px; margin-top: 10px;">متجر Nano store </h4>
+    <p style="font-size: 18px;">للمنتجات الرقمية</p>
+</div>
+<div class="op-icons"style="top: 120px;">
+  <i class="fa-regular fa-eye"></i> 
+  <i class="fa-regular fa-heart"></i> 
+</div>
+<div class="add-to-cart" style="top: 170px;">
+  <button>
+    <span class="logo-add"><i class="fa-solid fa-bag-shopping"></i></span>
+    <span class="text-add">إضافة للسلة</span>
+  </button>
+</div>
+</div>
+  </div>
+</section> -->
+
+
+
+<footer>
+  <div class="footer-container" id="contact">
+      <div class="footer-section about">
+          <h2>ستايل</h2>
+          <p>
+            بلومارك شركة سعودية برؤية طموحة بُنيت بسواعد شباب قادرين على تبديل
+            المستحيل إلى واقع والعقبات إلى صعوبات في طي النسيان ، بلومارك سعودية
+            شغفها العالمية
+          </p>
+      </div>
+
+      <div class="footer-section contact">
+          <h2>المكتب</h2>
+          <p>مكة المكرمة - النسيم</p>
+          <p>contact@blumark24.com</p>
+          <p>966507006849</p>
+      </div>
+
+      <div class="footer-section links">
+          <h2>الروابط</h2>
+          <ul>
+              <li><a href="#home">الرئيسية</a></li>
+              <li><a href="#services">خدماتنا</a></li>
+              <li><a href="#about">من نحن</a></li>
+              <li><a href="#contact">تواصل معنا</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-section newsletter">
+          <h2>اتصل بنا</h2>
+          <form>
+              <input type="email" placeholder="أدخل اسمك هنا" required>
+              <input type="email" placeholder="أدخل رقم هاتفك" required>
+              <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+              <input type="email" placeholder="اكتب رسالتك هنا" required style="height: 140px;">
+              <button type="submit">إرسال</button>
+          </form>
+      </div>
+
+      <!-- روابط السوشيال ميديا -->
+      <div class="footer-section social">
+          <h2>تابعنا على</h2>
+          <div class="social-icons">
+              <a href="#" target="_blank" aria-label="فيسبوك" ><i class="fab fa-facebook-f"></i></a>
+              <a href="#" target="_blank" aria-label="تويتر" ><i class="fab fa-twitter"></i></a>
+              <a href="#" target="_blank" aria-label="إنستغرام" ><i class="fab fa-instagram"></i></a>
+              <a href="#" target="_blank" aria-label="لينكدإن" ><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" target="_blank" aria-label="يوتيوب" ><i class="fab fa-youtube"></i></a>
+          </div>
+      </div>
+  </div>
+
+  <div class="footer-bottom">
+      &copy; جميع الحقوق محفوظة | 2024
+  </div>
+</footer>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="main.js">
+  	    $(".testimonial-carousel").slick({
+	        infinite: true,
+	        centerMode: true,
+	        autoplay:true,
+	        slidesToShow: 5,
+	        slidesToScroll: 3,
+	        autoplaySpeed:1500,
+	        // the magic
+			responsive: [
+				{
+
+					breakpoint:1440,
+					settings: {
+					slidesToShow:3
+					}
+
+				},
+				{
+
+					breakpoint: 1024,
+					settings: {
+					slidesToShow:2,
+					
+					}
+
+				}, 
+				{
+
+					breakpoint:991,
+					settings: {
+					slidesToShow:2,
+					centerMode:false,
+					}
+
+				},
+				{
+
+					breakpoint:767,
+					settings: {
+					slidesToShow:1,
+					}
+
+				}
+			]
+	    });
+
+</script>
+<script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Add to Cart</title>
+    <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+            text-decoration: none;
+            background-color: #fff;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            padding: 10px;
+        }
+
+        .product-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .product-left, .product-right {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .product-pricing {
+            margin-bottom: 20px;
+        }
+
+        .price-discount {
+            display: flex;
+            align-items: center;
+            color: #e63946;
+            margin-bottom: 10px;
+        }
+
+        .discount-icon {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+
+        .price-details {
+            font-size: 18px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            margin-right: 10px;
+        }
+
+        .new-price {
+            color: #e63946;
+            font-weight: bold;
+        }
+
+        .price-note {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .availability {
+            display: flex;
+            align-items: center;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+
+        .status-icon {
+            margin-right: 5px;
+        }
+
+        .installments {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .installments img {
+            width: 60px;
+            margin-right: 10px;
+        }
+
+        .quantity-control {
+            margin-bottom: 20px;
+        }
+
+        .quantity-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .quantity-buttons button {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ddd;
+            background: #f0f0f0;
+            color: #333;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .quantity-buttons input {
+            width: 50px;
+            text-align: center;
+            margin: 0 5px;
+            border: 1px solid #ddd;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .add-to-cart, .buy-now {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .add-to-cart {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .buy-now {
+            background-color: #6200ea;
+            color: #fff;
+        }
+
+        .product-right img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .suggested-services {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .service-box {
+            width: 200px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-box img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .service-title {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .service-price {
+            font-size: 14px;
+            color: #e63946;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .installments img {
+                width: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="product-section">
+        <div class="container">
+            <div class="product-right">
+                <img src="image/ser3.jpg" alt="Product Image">
+            </div>
+            <div class="product-left">
+                <h2 class="product-title">Instagram، TikTok</h2>
+                <h3 class="product-subtitle">الباقة الأساسية</h3>
+                <div class="product-pricing">
+                    <div class="price-discount">
+                        <span class="discount-icon">🔥</span>
+                        <span class="discount-text">وفر 34500.00 ر.س</span>
+                    </div>
+                    <div class="price-details">
+                        <span class="old-price">SAR 1,500</span>
+                        <span class="new-price">SAR 299</span>
+                    </div>
+                    <p class="price-note">السعر شامل الضريبة</p>
+                </div>
+                <div class="availability">
+                    <span class="status-icon">✔</span>
+                    <span class="status-text">مُتوفر</span>
+                </div>
+                <div class="installments">
+                    <img src="image/Tabby.png" alt="Tabby Logo">
+                    <span>
+                        4 دفعات بلا فوائد بقيمة SAR 10,062.50 بدون رسوم.
+                        <a href="#">لمعرفة المزيد</a>
+                    </span>
+                </div>
+                <div class="quantity-control">
+                    <label for="quantity">الكمية</label>
+                    <div class="quantity-buttons">
+                        <button class="decrease-btn">-</button>
+                        <input type="number" id="quantity" value="1" min="1">
+                        <button class="increase-btn">+</button>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="add-to-cart">إضافة للسلة</button>
+                    <button class="buy-now">اشترِ الآن</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="suggested-services">
+        <div class="service-box">
+            <img src="image/ser1.jpg" alt="Service 1">
+            <div class="service-title">تصميم موقع إلكتروني من 3 صفحات</div>
+            <div class="service-price">SAR 400</div>
+            <span class="old-price">SAR 1,500</span>
+        </div>
+        <div class="service-box">
+            <img src="image/ser2.jpg" alt="Service 2">
+            <div class="service-title">تصميم موقع إلكتروني</div>
+            <div class="service-price">SAR 5,000</div>
+        </div>
+        <div class="service-box">
+            <img src="image/ser3.jpg" alt="Service 3">
+            <div class="service-title">إدارة حسابات التواصل</div>
+            <div class="service-price">SAR 3,000</div>
+        </div>
+        <div class="service-box">
+          <img src="image/ser3.jpg" alt="Service 3">
+          <div class="service-title">إدارة حسابات التواصل</div>
+          <div class="service-price">SAR 3,000</div>
+      </div>
+      <div class="service-box">
+        <img src="image/ser3.jpg" alt="Service 3">
+        <div class="service-title">إدارة حسابات التواصل</div>
+        <div class="service-price">SAR 3,000</div>
+    </div>
+    </section>
+</body>
+<script>
+  // تحديد جميع المنتجات الصغيرة والعناصر الرئيسية
+const smallProducts = document.querySelectorAll('.service-box');
+const mainProductImage = document.querySelector('.product-right img');
+const mainProductTitle = document.querySelector('.product-title');
+const mainProductSubtitle = document.querySelector('.product-subtitle');
+const mainProductOldPrice = document.querySelector('.old-price');
+const mainProductNewPrice = document.querySelector('.new-price');
+
+// إضافة تفاصيل المنتجات الصغيرة ككائنات بيانات
+const productData = [
+    {
+        imgSrc: 'image/ser1.jpg',
+        title: 'تصميم موقع إلكتروني من 3 صفحات',
+        subtitle: 'خدمة تصميم احترافية',
+        oldPrice: 'SAR 1,500',
+        newPrice: 'SAR 400'
+    },
+    {
+        imgSrc: 'image/ser2.jpg',
+        title: 'تصميم موقع إلكتروني',
+        subtitle: 'خدمة تصميم كاملة',
+        oldPrice: 'SAR 6,000',
+        newPrice: 'SAR 5,000'
+    },
+    {
+        imgSrc: 'image/ser3.jpg',
+        title: 'إدارة حسابات التواصل',
+        subtitle: 'إدارة حساباتك باحترافية',
+        oldPrice: 'SAR 3,500',
+        newPrice: 'SAR 3,000'
+    }
+];
+
+// إضافة حدث النقر على كل منتج صغير
+smallProducts.forEach((product, index) => {
+    product.addEventListener('click', () => {
+        // تحديث الصورة الرئيسية
+        mainProductImage.src = productData[index].imgSrc;
+        mainProductImage.alt = productData[index].title;
+
+        // تحديث العنوان والتفاصيل
+        mainProductTitle.textContent = productData[index].title;
+        mainProductSubtitle.textContent = productData[index].subtitle;
+
+        // تحديث الأسعار
+        mainProductOldPrice.textContent = productData[index].oldPrice;
+        mainProductNewPrice.textContent = productData[index].newPrice;
+    });
+});
+
+</script>
+</html>
+
